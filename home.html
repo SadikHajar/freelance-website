@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <title>Website</title>
+</head>
+
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="images/banner.png" id="slideImg">
+        </div>
+        <div class="overlay">
+            <nav>
+                <div class="logo">
+                    <a href="home.html"><img src="images/logo-no-background.png"></a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="info.html">How it works</a></li>
+                        <li><a href="">Get Jobs</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="" class="btn">Post a project</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>Hire the best <br> freelancers for any job, <br> online.</h1>
+                <p>World's largest freelance marketplace <br> Any job you can possibly think of.<br>
+                    Save up to 90% & get quotes for free <br> Pay only when you're 100% happy</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+
+        var images = new Array(
+            "images/banner.png",
+            "images/banner_2.png",
+            "images/banner_3.png",
+            "images/banner_4.png",
+            "images/banner_5.png"
+        );
+
+        var len = images.length;
+        var i = 0;
+
+        function slider() {
+            if(i > len-1) {
+                i = 0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slider()', 3000)
+        }
+
+    </script>
+
+    <section class="content">
+        <h1 class="text-center font-weight-bold">Need something done?</h1>
+        <div class="row">
+            <div class="column">
+                <h3>Post a job</h3>
+                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids
+                    come within minutes.</p>
+            </div>
+            <div class="column">
+                <h3>Choose freelancers</h3>
+                <p>No job is too big or too small. We've got freelancers for jobs of any size or budget, across 1800+
+                    skills. No job is too complex. We can get it done!</p>
+            </div>
+            <div class="column">
+                <h3>Pay safely</h3>
+                <p>Only pay for work when it has been completed and you're 100% satisfied with the quality using our
+                    milestone payment system.</p>
+            </div>
+            <div class="column">
+                <h3>We’re here to help</h3>
+                <p>Our talented team of recruiters can help you find the best freelancer for the job and our technical
+                    co-pilots can even manage the project for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h1 class="text-center font-weight-bold">What's great about it?</h1>
+        <div class="row">
+            <div class="column">
+                <h3>Browse portfolios</h3>
+                <p>Find professionals you can trust by browsing their samples of previous work and reading their profile
+                    reviews.</p>
+            </div>
+            <div class="column">
+                <h3>Fast bids</h3>
+                <p>Receive obligation free quotes from our talented freelancers fast. 80% of projects get bid on within
+                    60 seconds.</p>
+            </div>
+            <div class="column">
+                <h3>Quality work</h3>
+                <p>Freelancer.com has by far the largest pool of quality freelancers globally- over 60 million to choose
+                    from.</p>
+            </div>
+            <div class="column">
+                <h3>Track progress</h3>
+                <p>Keep up-to-date and on-the-go with our time tracker, and mobile app. Always know what freelancers are
+                    up to.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <h2 class="text-center font-weight-bold">Our Partners</h2>
+        <section class="customer-logos slider">
+            <div class="slide"><img src="images/adidas.png" alt="logo"></div>
+            <div class="slide"><img src="images/facebook.png" alt="logo"></div>
+            <div class="slide"><img src="images/google.png" alt="logo"></div>
+            <div class="slide"><img src="images/instagram.png" alt="logo"></div>
+            <div class="slide"><img src="images/nike.png" alt="logo"></div>
+            <div class="slide"><img src="images/twitter.png" alt="logo"></div>
+            <div class="slide"><img src="images/uber.png" alt="logo"></div>
+            <div class="slide"><img src="images/youtube.png" alt="logo"></div>
+        </section>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    setting: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    setting: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        });
+
+    </script>
+
+
+    <section class="campus">
+        <h1 class="text-center font-weight-bold">Make it Real with Simple Job.</h1>
+        <p>Get some Inspirations from 1800+ skills</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/ai_art.png" alt="">
+                <h3>AI generated art.<br>
+                    $200 USD in 7 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/mobile.png" alt="">
+                <h3>Mobile app.<br>
+                    $2100 USD in 60 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/model.png" alt="">
+                <h3>Interior 3D model.<br>
+                    $350 USD in 7 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/wordpress.png" alt="">
+                <h3>Wordpress website.<br>
+                    $125 USD in 7 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/seo.png" alt="">
+                <h3>SEO expert.<br>
+                    $100 USD in 3 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/video.png" alt="">
+                <h3>Video production.<br>
+                    $1960 USD in 30 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/book.png" alt="">
+                <h3>Book cover design.<br>
+                    $25 USD in 3 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/illustration.png" alt="">
+                <h3>Character illustration.<br>
+                    $60 USD in 5 days.</h3>
+                <div class="layer">
+                    <h3>Discover More</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="">Graphics & Design</a></li>
+                        <li><a href="">Digital Marketing</a></li>
+                        <li><a href="">Writing & Translation</a></li>
+                        <li><a href="">Video & Animation</a></li>
+                        <li><a href="">Music & Audio</a></li>
+                        <li><a href="">Programming & Tech</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">Photography</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Press & News</a></li>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Terms and Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="">Help & Support</a></li>
+                        <li><a href="">Trust & Safety</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p>All Rights Reserved &copy; Hajar Sadik & Soukayna El ideissi</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
